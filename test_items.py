@@ -9,5 +9,5 @@ def test_basket_button_existed(browser):
     browser.implicitly_wait(5)
     basket = browser.find_element(By.XPATH, '//*[@id="add_to_basket_form"]/button')
     print('\n', basket.text)
-    assert basket != None, "the button is missing"
+    assert basket.is_displayed(), "the button is missing"
     time.sleep(30)
